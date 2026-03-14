@@ -1,0 +1,16 @@
+fastapi==0.115.0
+uvicorn[standard]==0.30.0
+sqlmodel==0.0.21
+psycopg2-binary>=2.9.0
+alembic==1.13.1
+pydantic-settings==2.3.4
+httpx==0.27.0
+loguru==0.7.2
+python-dotenv==1.0.1
+numpy>=1.26.4
+scipy>=1.13.0
+skyfield==1.49
+astropy>=6.1.0
+pandas>=2.2.2
+gmn-python-api==0.0.13
+requests==2.32.3

@@ -1,0 +1,63 @@
+:root {
+  /* Base backgrounds — layered depth */
+  --bg-void:        #03040A;   /* deepest background, near-black with blue undertone */
+  --bg-deep:        #080C16;   /* main page background */
+  --bg-surface:     #0D1220;   /* card/panel background */
+  --bg-elevated:    #121828;   /* hover/selected state */
+  --bg-overlay:     #1A2236;   /* modal/popover background */
+
+  /* Primary — aurora teal */
+  --accent-primary:     #2DD4BF;   /* teal-400, primary interactive elements */
+  --accent-primary-dim: #1A9E8F;   /* dimmed/hover teal */
+  --accent-primary-glow: rgba(45, 212, 191, 0.15); /* glow/halo effect */
+
+  /* Secondary — nebula violet */
+  --accent-secondary:     #818CF8;  /* indigo-400 */
+  --accent-secondary-dim: #5B63C9;
+  --accent-secondary-glow: rgba(129, 140, 248, 0.12);
+
+  /* Accent — fireball amber (used for velocity, brightness data) */
+  --accent-fire:     #F59E0B;   /* amber-400 */
+  --accent-fire-dim: #D97706;
+  --accent-fire-glow: rgba(245, 158, 11, 0.15);
+
+  /* Status colors */
+  --status-success: #34D399;  /* emerald-400 */
+  --status-warning: #FBBF24;  /* amber-400 */
+  --status-error:   #F87171;  /* red-400 */
+  --status-info:    #60A5FA;  /* blue-400 */
+
+  /* Text hierarchy */
+  --text-primary:   #F1F5F9;   /* slate-100 */
+  --text-secondary: #94A3B8;   /* slate-400 */
+  --text-muted:     #475569;   /* slate-600 */
+  --text-disabled:  #334155;   /* slate-700 */
+
+  /* Borders */
+  --border-subtle:  rgba(148, 163, 184, 0.08);  /* barely visible dividers */
+  --border-default: rgba(148, 163, 184, 0.15);
+  --border-strong:  rgba(148, 163, 184, 0.3);
+  --border-accent:  rgba(45, 212, 191, 0.4);
+
+  /* Spacing scale (multiples of 4px) */
+  --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px;
+  --space-5: 20px; --space-6: 24px; --space-8: 32px; --space-10: 40px;
+  --space-12: 48px; --space-16: 64px;
+
+  /* Radius */
+  --radius-sm: 6px; --radius-md: 10px; --radius-lg: 16px; --radius-xl: 24px;
+
+  /* Shadows — glow-based, not dark drop shadows */
+  --shadow-sm:   0 0 0 1px var(--border-subtle);
+  --shadow-md:   0 0 0 1px var(--border-default), 0 4px 24px rgba(0,0,0,0.4);
+  --shadow-glow-teal:   0 0 20px rgba(45,212,191,0.2), 0 0 40px rgba(45,212,191,0.08);
+  --shadow-glow-violet: 0 0 20px rgba(129,140,248,0.2);
+
+  /* Gradients */
+  --gradient-hero: linear-gradient(135deg, #03040A 0%, #080C16 40%, #0D1220 100%);
+  --gradient-card: linear-gradient(135deg, rgba(13,18,32,0.9) 0%, rgba(18,24,40,0.8) 100%);
+  --gradient-teal: linear-gradient(90deg, #2DD4BF 0%, #818CF8 100%);
+  --gradient-fire: linear-gradient(90deg, #F59E0B 0%, #EF4444 100%);
+  --gradient-badge-gmn: linear-gradient(90deg, #2DD4BF22, #2DD4BF44);
+  --gradient-badge-nasa: linear-gradient(90deg, #60A5FA22, #60A5FA44);
+}
