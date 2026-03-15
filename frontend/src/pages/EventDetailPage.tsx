@@ -1,15 +1,14 @@
 import { useParams, Link } from 'react-router-dom';
 import { format } from 'date-fns';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
-import { Atom, ChevronRight, Activity, Zap, Clock, Ruler, ArrowDown, Share2 } from 'lucide-react';
+import { Atom, ChevronRight, Activity, Zap, Clock, ArrowDown, Share2, Globe } from 'lucide-react';
 import { useEvent } from '../hooks/useEvent';
 import { PageLoader } from '../components/ui/Loader';
 import { Card } from '../components/ui/Card';
-import { StatChip } from '../ui/StatChip';
+import { StatChip } from '../components/ui/StatChip';
 import { Badge } from '../components/ui/Badge';
 import { EarthGlobe } from '../components/globe/EarthGlobe';
 import { PlaceholderChart } from '../components/charts/PlaceholderChart';
-import { apiClient } from '../api/client';
 
 export function EventDetailPage() {
     const { id } = useParams<{ id: string }>();

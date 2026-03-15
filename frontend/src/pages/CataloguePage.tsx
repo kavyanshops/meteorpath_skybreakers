@@ -1,5 +1,4 @@
-import { useState, useEffect } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 import { Grid, List } from 'lucide-react';
 import { useEvents, UseEventsParams } from '../hooks/useEvents';
 import { FilterBar } from '../components/catalogue/FilterBar';
@@ -18,9 +17,6 @@ export function CataloguePage() {
     });
 
     const { data, isLoading, error } = useEvents(filters);
-
-    // Sync basic state from URL if needed in a real app
-    const location = useLocation();
 
     if (isLoading) return <PageLoader />;
     if (error) return <div className="text-status-error text-center mt-20 font-mono">Error loading events. Please try again later.</div>;

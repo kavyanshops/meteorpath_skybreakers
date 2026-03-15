@@ -1,7 +1,7 @@
 import { Viewer, Entity, PointGraphics, PolylineGraphics } from 'resium';
 import * as Cesium from 'cesium';
 import { EventDetail } from '../../types';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 
 // Required for Cesium in Vite
 import 'cesium/Build/Cesium/Widgets/widgets.css';
@@ -12,17 +12,19 @@ interface EarthGlobeProps {
 
 export function EarthGlobe({ event }: EarthGlobeProps) {
     const viewerRef = useRef<Cesium.Viewer | null>(null);
-    const [imageryProvider, setImageryProvider] = useState<Cesium.ImageryProvider | null>(null);
 
     useEffect(() => {
-        // Try to load a dark basemap if possible, fallback to default
+        if (!viewerRef.current) return;
+        const viewer = viewerRef.current;
+
+        // Add dark basemap imagery layer
         try {
-            // Using CartoDB Dark Matter if available via XYZ, otherwise fallback
             const provider = new Cesium.UrlTemplateImageryProvider({
                 url: 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png',
                 credit: '© CARTO',
             });
-            setImageryProvider(provider);
+            viewer.imageryLayers.removeAll();
+            viewer.imageryLayers.addImageryProvider(provider);
         } catch (e) {
             console.warn('Could not load custom imagery', e);
         }
@@ -33,17 +35,15 @@ export function EarthGlobe({ event }: EarthGlobeProps) {
         const viewer = viewerRef.current;
 
         if (event.begin_lat && event.begin_lon) {
-            // Fly to the event coordinates
             viewer.camera.flyTo({
                 destination: Cesium.Cartesian3.fromDegrees(
                     event.begin_lon,
                     event.begin_lat,
-                    800000 // 800km altitude
+                    800000
                 ),
                 duration: 2,
             });
         } else {
-            // Zoom out to see whole earth if no coords
             viewer.camera.flyTo({
                 destination: Cesium.Cartesian3.fromDegrees(0, 0, 15000000),
                 duration: 0,
@@ -73,8 +73,7 @@ export function EarthGlobe({ event }: EarthGlobeProps) {
                 infoBox={false}
                 selectionIndicator={false}
                 fullscreenButton={false}
-                requestRenderMode={true} // optimize performance
-                imageryProvider={imageryProvider || undefined}
+                requestRenderMode={true}
                 className="absolute inset-0"
             >
                 {/* Render line if we have both points */}

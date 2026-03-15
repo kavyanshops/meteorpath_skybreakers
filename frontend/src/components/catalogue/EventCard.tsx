@@ -11,14 +11,6 @@ interface EventCardProps {
 }
 
 export function EventCard({ event }: EventCardProps) {
-    const getVelocityColorClass = (v: number | null) => {
-        if (!v) return 'text-secondary';
-        if (v < 20) return 'text-status-success';
-        if (v < 40) return 'text-accent-primary';
-        if (v < 60) return 'text-accent-fire fill-accent-fire';
-        return 'text-status-error';
-    };
-
     const getVelocityTextGradient = (v: number | null) => {
         if (!v) return '';
         if (v < 20) return 'bg-gradient-to-r from-status-success to-teal-200';
@@ -27,7 +19,6 @@ export function EventCard({ event }: EventCardProps) {
         return 'bg-gradient-to-r from-status-error to-rose-400';
     };
 
-    const velocityColor = getVelocityColorClass(event.entry_velocity_km_s);
     const velocityGradient = getVelocityTextGradient(event.entry_velocity_km_s);
 
     return (
