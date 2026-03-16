@@ -26,8 +26,7 @@ class ReconstructionDetail(BaseModel):
     orbit_a_au: Optional[float] = None
     orbit_e: Optional[float] = None
     orbit_i_deg: Optional[float] = None
-    orbit_omega_deg: Optional[float] = None
-    orbit_Omega_deg: Optional[float] = None
+    orbit_big_omega_deg: Optional[float] = None
     orbit_q_au: Optional[float] = None
     completed_at: Optional[datetime] = None
 

@@ -11,6 +11,6 @@ numpy>=1.26.4
 scipy>=1.13.0
 skyfield==1.49
 astropy>=6.1.0
-pandas>=2.2.2
-gmn-python-api==0.0.13
+pandas>=2.0.0
+# gmn-python-api==0.0.13 (commented out due to pandas 1.3.5 dependency conflict on Python 3.14)
 requests==2.32.3
