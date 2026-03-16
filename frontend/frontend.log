@@ -2886,3 +2886,186 @@
 1:26:33 PM [vite] hmr update /src/components/visualizations/StrewnFieldMap.tsx, /src/index.css
 1:26:45 PM [vite] hmr update /src/components/visualizations/OrbitDiagram.tsx, /src/index.css
 1:31:57 PM [vite] hmr update /src/components/visualizations/TrajectoryGlobe.tsx, /src/index.css
+1:47:39 PM [vite] hmr update /src/pages/ComparePage.tsx, /src/index.css
+1:47:40 PM [vite] Internal server error: Failed to resolve import "../../api/client" from "src/pages/ComparePage.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/ks/Desktop/Orion Astrathone/meteorpath/frontend/src/pages/ComparePage.tsx:2:26
+  17 |  var _s = $RefreshSig$();
+  18 |  import { useQuery } from "@tanstack/react-query";
+  19 |  import { apiClient } from "../../api/client";
+     |                             ^
+  20 |  import { useCompareStore } from "../../store/compareStore";
+  21 |  import { PageLoader } from "../ui/Loader";
+      at TransformPluginContext._formatError (file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 4)
+      at async TransformPluginContext.transform (file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+1:47:40 PM [vite] Internal server error: Failed to resolve import "../../api/client" from "src/pages/ComparePage.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/ks/Desktop/Orion Astrathone/meteorpath/frontend/src/pages/ComparePage.tsx:2:26
+  17 |  var _s = $RefreshSig$();
+  18 |  import { useQuery } from "@tanstack/react-query";
+  19 |  import { apiClient } from "../../api/client";
+     |                             ^
+  20 |  import { useCompareStore } from "../../store/compareStore";
+  21 |  import { PageLoader } from "../ui/Loader";
+      at TransformPluginContext._formatError (file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 4)
+      at async TransformPluginContext.transform (file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+1:47:40 PM [vite] Internal server error: Failed to resolve import "../../api/client" from "src/pages/ComparePage.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/ks/Desktop/Orion Astrathone/meteorpath/frontend/src/pages/ComparePage.tsx:2:26
+  17 |  var _s = $RefreshSig$();
+  18 |  import { useQuery } from "@tanstack/react-query";
+  19 |  import { apiClient } from "../../api/client";
+     |                             ^
+  20 |  import { useCompareStore } from "../../store/compareStore";
+  21 |  import { PageLoader } from "../ui/Loader";
+      at TransformPluginContext._formatError (file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 4)
+      at async TransformPluginContext.transform (file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+      at async viteTransformMiddleware (file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:62106:24)
+1:47:40 PM [vite] Internal server error: Failed to resolve import "../../api/client" from "src/pages/ComparePage.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/ks/Desktop/Orion Astrathone/meteorpath/frontend/src/pages/ComparePage.tsx:2:26
+  17 |  var _s = $RefreshSig$();
+  18 |  import { useQuery } from "@tanstack/react-query";
+  19 |  import { apiClient } from "../../api/client";
+     |                             ^
+  20 |  import { useCompareStore } from "../../store/compareStore";
+  21 |  import { PageLoader } from "../ui/Loader";
+      at TransformPluginContext._formatError (file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 4)
+      at async TransformPluginContext.transform (file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+      at async viteTransformMiddleware (file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:62106:24)
+1:47:40 PM [vite] Internal server error: Failed to resolve import "../../api/client" from "src/pages/ComparePage.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/ks/Desktop/Orion Astrathone/meteorpath/frontend/src/pages/ComparePage.tsx:2:26
+  17 |  var _s = $RefreshSig$();
+  18 |  import { useQuery } from "@tanstack/react-query";
+  19 |  import { apiClient } from "../../api/client";
+     |                             ^
+  20 |  import { useCompareStore } from "../../store/compareStore";
+  21 |  import { PageLoader } from "../ui/Loader";
+      at TransformPluginContext._formatError (file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 4)
+      at async TransformPluginContext.transform (file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+      at async viteTransformMiddleware (file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:62106:24)
+1:47:40 PM [vite] Internal server error: Failed to resolve import "../../api/client" from "src/pages/ComparePage.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/ks/Desktop/Orion Astrathone/meteorpath/frontend/src/pages/ComparePage.tsx:2:26
+  17 |  var _s = $RefreshSig$();
+  18 |  import { useQuery } from "@tanstack/react-query";
+  19 |  import { apiClient } from "../../api/client";
+     |                             ^
+  20 |  import { useCompareStore } from "../../store/compareStore";
+  21 |  import { PageLoader } from "../ui/Loader";
+      at TransformPluginContext._formatError (file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 4)
+      at async TransformPluginContext.transform (file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+      at async viteTransformMiddleware (file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:62106:24)
+1:47:40 PM [vite] Internal server error: Failed to resolve import "../../api/client" from "src/pages/ComparePage.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/ks/Desktop/Orion Astrathone/meteorpath/frontend/src/pages/ComparePage.tsx:2:26
+  17 |  var _s = $RefreshSig$();
+  18 |  import { useQuery } from "@tanstack/react-query";
+  19 |  import { apiClient } from "../../api/client";
+     |                             ^
+  20 |  import { useCompareStore } from "../../store/compareStore";
+  21 |  import { PageLoader } from "../ui/Loader";
+      at TransformPluginContext._formatError (file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 4)
+      at async TransformPluginContext.transform (file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+      at async viteTransformMiddleware (file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:62106:24)
+1:47:40 PM [vite] Internal server error: Failed to resolve import "../../api/client" from "src/pages/ComparePage.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/ks/Desktop/Orion Astrathone/meteorpath/frontend/src/pages/ComparePage.tsx:2:26
+  17 |  var _s = $RefreshSig$();
+  18 |  import { useQuery } from "@tanstack/react-query";
+  19 |  import { apiClient } from "../../api/client";
+     |                             ^
+  20 |  import { useCompareStore } from "../../store/compareStore";
+  21 |  import { PageLoader } from "../ui/Loader";
+      at TransformPluginContext._formatError (file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 4)
+      at async TransformPluginContext.transform (file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+      at async viteTransformMiddleware (file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:62106:24)
+1:47:40 PM [vite] Internal server error: Failed to resolve import "../../api/client" from "src/pages/ComparePage.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/ks/Desktop/Orion Astrathone/meteorpath/frontend/src/pages/ComparePage.tsx:2:26
+  17 |  var _s = $RefreshSig$();
+  18 |  import { useQuery } from "@tanstack/react-query";
+  19 |  import { apiClient } from "../../api/client";
+     |                             ^
+  20 |  import { useCompareStore } from "../../store/compareStore";
+  21 |  import { PageLoader } from "../ui/Loader";
+      at TransformPluginContext._formatError (file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 4)
+      at async TransformPluginContext.transform (file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+      at async viteTransformMiddleware (file:///Users/ks/Desktop/Orion%20Astrathone/meteorpath/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:62106:24)
+1:48:00 PM [vite] hmr update /src/App.tsx, /src/index.css
+1:48:02 PM [vite] hmr update /src/pages/ComparePage.tsx, /src/index.css
+1:48:14 PM [vite] hmr update /src/pages/ComparePage.tsx, /src/index.css
+1:48:44 PM [vite] hmr update /src/pages/LiveFeedPage.tsx, /src/index.css
+1:49:14 PM [vite] hmr update /src/pages/AboutPage.tsx, /src/index.css
+1:49:41 PM [vite] hmr update /src/pages/AboutPage.tsx, /src/index.css
+1:50:23 PM [vite] hmr update /src/pages/AboutPage.tsx, /src/index.css
+1:51:05 PM [vite] hmr update /src/pages/AboutPage.tsx, /src/index.css
+1:51:32 PM [vite] hmr update /src/pages/AboutPage.tsx, /src/index.css
+1:52:06 PM [vite] hmr update /src/pages/AboutPage.tsx, /src/index.css
+1:52:40 PM [vite] hmr update /src/pages/AboutPage.tsx, /src/index.css
+1:53:30 PM [vite] hmr update /src/pages/AboutPage.tsx, /src/index.css
+1:53:34 PM [vite] hmr update /src/pages/LiveFeedPage.tsx, /src/index.css
