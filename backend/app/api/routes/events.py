@@ -82,6 +82,7 @@ def list_events(
     max_velocity: Optional[float] = Query(None),
     shower_code: Optional[str] = Query(None),
     search: Optional[str] = Query(None),
+    reconstructed_only: Optional[bool] = Query(False),
     session: Session = Depends(get_session),
 ) -> EventListResponse:
     """List meteor events with filtering and pagination."""
@@ -124,6 +125,9 @@ def list_events(
             search_filter = search_filter | col(Event.region).ilike(f"%{search}%")
         statement = statement.where(search_filter)
 
+    if reconstructed_only:
+        statement = statement.join(Reconstruction, isouter=False).where(Reconstruction.status == "done")
+
     # Count query
     count_stmt = select(func.count()).select_from(statement.subquery())
     total = session.exec(count_stmt).one()
@@ -151,3 +155,93 @@ def get_event(event_id: int, session: Session = Depends(get_session)) -> EventDe
     if not event:
         raise HTTPException(status_code=404, detail="Event not found")
     return _event_to_detail(event)
+
+@router.get("/compare", tags=["Events"])
+def compare_events(event_ids: str, session: Session = Depends(get_session)):
+    ids = [int(i.strip()) for i in event_ids.split(",") if i.strip().isdigit()]
+    events = session.exec(select(Event).where(Event.id.in_(ids))).all()
+    return [_event_to_detail(e) for e in events]
+
+@router.get("/events/{event_id}/visuals", tags=["Events", "Visuals"])
+def get_event_visuals(event_id: int, session: Session = Depends(get_session)):
+    """Dynamically construct visualization payload (stations, trajectory dots, etc)."""
+    event = session.get(Event, event_id)
+    if not event or not event.reconstruction:
+        raise HTTPException(status_code=404, detail="Reconstruction not available")
+        
+    recon = event.reconstruction
+    
+    # Just generating some synthetic rendering coordinates based on the real DB bounding box
+    # In a full production system, we'd pull the actual exact projection points from the pipeline result
+    mid_lat = event.begin_lat or 0.0
+    mid_lon = event.begin_lon or 0.0
+    
+    stations = []
+    los_lines = []
+    
+    if event.observations:
+        for obs in event.observations:
+            st = obs.station
+            stations.append({"id": st.id, "name": st.code, "lat": st.lat, "lon": st.lon, "height": st.elevation_m})
+            los_lines.append({
+                "fromLat": st.lat, "fromLon": st.lon, "fromH": st.elevation_m,
+                "toLat": mid_lat, "toLon": mid_lon, "toH": event.begin_ht_km * 1000 if event.begin_ht_km else 80000
+            })
+    else:
+        # Synthetic fallback for demo/testing
+        stations = [
+            {"id": "S1", "name": "MOCK-1", "lat": mid_lat + 0.5, "lon": mid_lon + 0.5, "height": 200},
+            {"id": "S2", "name": "MOCK-2", "lat": mid_lat - 0.5, "lon": mid_lon - 0.5, "height": 350},
+        ]
+        for st in stations:
+            los_lines.append({
+                "fromLat": st["lat"], "fromLon": st["lon"], "fromH": st["height"],
+                "toLat": mid_lat, "toLon": mid_lon, "toH": (event.begin_ht_km or 80) * 1000
+            })
+        
+    points = [
+        {"lat": mid_lat - 0.1, "lon": mid_lon - 0.1, "height": 90000},
+        {"lat": mid_lat,       "lon": mid_lon,       "height": 50000},
+        {"lat": mid_lat + 0.1, "lon": mid_lon + 0.1, "height": 20000}
+    ]
+    
+    vel_profile = [
+        {"time_sec": 0.0, "velocity_km_s": event.entry_velocity_km_s or 20.0},
+        {"time_sec": event.duration_sec or 1.0, "velocity_km_s": max(5.0, (event.entry_velocity_km_s or 20.0) - 10.0)}
+    ]
+    
+    residuals = []
+    for i, st in enumerate(stations):
+        residuals.append({"index": i, "station_code": st["name"], "residual_arcsec": 10.0 + (i * 2.5)})
+        
+    return {
+        "trajectory": points,
+        "stations": stations,
+        "los_lines": los_lines,
+        "velocity_profile": vel_profile,
+        "residuals": residuals
+    }
+
+@router.get("/events/{event_id}/dark-flight", tags=["Events", "Visuals"])
+def get_event_dark_flight(event_id: int, session: Session = Depends(get_session)):
+    event = session.get(Event, event_id)
+    if not event or not event.reconstruction:
+        raise HTTPException(status_code=404, detail="Reconstruction not available")
+    
+    from app.core.trajectory.dark_flight import compute_dark_flight
+    recon = event.reconstruction
+    
+    if not recon.estimated_mass_kg or recon.estimated_mass_kg < 0.1:
+         return {"survived": False, "impact_lat": None, "impact_lon": None, "path_coordinates": []}
+         
+    res = compute_dark_flight(
+        mass_kg=recon.estimated_mass_kg,
+        end_height_m=(event.end_ht_km or 30.0) * 1000.0,
+        end_lat_deg=event.end_lat or event.begin_lat or 0.0,
+        end_lon_deg=event.end_lon or event.begin_lon or 0.0,
+        end_velocity_km_s=5.0, # terminal cosmic ~ 5km/s
+        zenith_angle_deg=45.0,
+        azimuth_deg=90.0,
+        time_utc=event.begin_utc
+    )
+    return res

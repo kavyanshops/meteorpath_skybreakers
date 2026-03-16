@@ -5,6 +5,7 @@ import { FilterBar } from '../components/catalogue/FilterBar';
 import { EventTable } from '../components/catalogue/EventTable';
 import { EventCard } from '../components/catalogue/EventCard';
 import { PaginationBar } from '../components/catalogue/PaginationBar';
+import { CompareBar } from '../components/catalogue/CompareBar';
 import { PageLoader } from '../components/ui/Loader';
 
 type ViewMode = 'table' | 'grid';
@@ -85,6 +86,7 @@ export function CataloguePage() {
                     </div>
                 </div>
             </div>
+            <CompareBar />
         </div>
     );
 }

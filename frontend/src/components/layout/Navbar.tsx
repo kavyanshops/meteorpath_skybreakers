@@ -26,6 +26,7 @@ export function Navbar() {
     const links = [
         { name: 'Catalogue', path: '/events' },
         { name: 'Compare', path: '/compare' },
+        { name: 'Live Feed', path: '/live-feed' },
         { name: 'About', path: '/about' },
     ];
 

@@ -48,6 +48,17 @@ class Reconstruction(SQLModel, table=True):
     orbit_big_omega_deg: float | None = Field(default=None, description="Longitude of ascending node (Omega)")
     orbit_q_au: float | None = Field(default=None, description="Perihelion distance in AU")
 
+    celery_task_id: str | None = Field(default=None, max_length=255)
+    low_quality_flag: bool = False
+    quality_warning: str | None = None
+    station_offsets_estimated: bool = False
+    mass_estimation_available: bool = False
+    estimated_mass_kg: float | None = None
+    estimated_mass_lower_kg: float | None = None
+    estimated_mass_upper_kg: float | None = None
+    luminous_efficiency_tau: float | None = None
+    is_reference_solution: bool = False
+
     completed_at: datetime | None = None
 
     event: "Event" = Relationship(back_populates="reconstruction")
@@ -89,7 +100,7 @@ class Event(SQLModel, table=True):
     station_count: int | None = None
     region: str | None = None
     shower_id: int | None = Field(default=None, foreign_key="shower.id")
-    ingestion_source: str = "GMN"
+    ingestion_source: str | None = Field(default="GMN", max_length=50)
     created_at: datetime = Field(default_factory=datetime.utcnow)
 
     shower: "Shower" = Relationship(back_populates="events")

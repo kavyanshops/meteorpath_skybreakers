@@ -1,0 +1,369 @@
+WARNING: The directory '/Users/ks/Library/Caches/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+Defaulting to user installation because normal site-packages is not writeable
+Collecting fastapi==0.115.0 (from -r requirements.txt (line 1))
+  Downloading fastapi-0.115.0-py3-none-any.whl.metadata (27 kB)
+Collecting uvicorn==0.30.0 (from uvicorn[standard]==0.30.0->-r requirements.txt (line 2))
+  Downloading uvicorn-0.30.0-py3-none-any.whl.metadata (6.3 kB)
+Collecting sqlmodel==0.0.21 (from -r requirements.txt (line 3))
+  Downloading sqlmodel-0.0.21-py3-none-any.whl.metadata (9.8 kB)
+Collecting psycopg2-binary>=2.9.0 (from -r requirements.txt (line 4))
+  Downloading psycopg2_binary-2.9.11-cp314-cp314-macosx_11_0_arm64.whl.metadata (4.9 kB)
+Collecting alembic==1.13.1 (from -r requirements.txt (line 5))
+  Downloading alembic-1.13.1-py3-none-any.whl.metadata (7.4 kB)
+Collecting pydantic-settings==2.3.4 (from -r requirements.txt (line 6))
+  Downloading pydantic_settings-2.3.4-py3-none-any.whl.metadata (3.3 kB)
+Collecting httpx==0.27.0 (from -r requirements.txt (line 7))
+  Downloading httpx-0.27.0-py3-none-any.whl.metadata (7.2 kB)
+Collecting loguru==0.7.2 (from -r requirements.txt (line 8))
+  Downloading loguru-0.7.2-py3-none-any.whl.metadata (23 kB)
+Collecting python-dotenv==1.0.1 (from -r requirements.txt (line 9))
+  Downloading python_dotenv-1.0.1-py3-none-any.whl.metadata (23 kB)
+Requirement already satisfied: numpy>=1.26.4 in /Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages (from -r requirements.txt (line 10)) (2.4.1)
+Requirement already satisfied: scipy>=1.13.0 in /Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages (from -r requirements.txt (line 11)) (1.17.0)
+Collecting skyfield==1.49 (from -r requirements.txt (line 12))
+  Downloading skyfield-1.49-py3-none-any.whl.metadata (2.4 kB)
+Collecting astropy>=6.1.0 (from -r requirements.txt (line 13))
+  Downloading astropy-7.2.0-cp311-abi3-macosx_11_0_arm64.whl.metadata (10 kB)
+Collecting pandas>=2.0.0 (from -r requirements.txt (line 14))
+  Downloading pandas-3.0.1-cp314-cp314-macosx_11_0_arm64.whl.metadata (79 kB)
+Collecting requests==2.32.3 (from -r requirements.txt (line 16))
+  Downloading requests-2.32.3-py3-none-any.whl.metadata (4.6 kB)
+Collecting nrlmsise00==0.1.1 (from -r requirements.txt (line 17))
+  Downloading nrlmsise00-0.1.1.tar.gz (63 kB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting celery==5.4.0 (from -r requirements.txt (line 18))
+  Downloading celery-5.4.0-py3-none-any.whl.metadata (21 kB)
+Collecting redis==5.0.6 (from -r requirements.txt (line 19))
+  Downloading redis-5.0.6-py3-none-any.whl.metadata (9.3 kB)
+Collecting flower==2.0.1 (from -r requirements.txt (line 20))
+  Downloading flower-2.0.1-py2.py3-none-any.whl.metadata (4.5 kB)
+Collecting apscheduler==3.10.4 (from -r requirements.txt (line 21))
+  Downloading APScheduler-3.10.4-py3-none-any.whl.metadata (5.7 kB)
+Collecting beautifulsoup4==4.12.3 (from -r requirements.txt (line 22))
+  Downloading beautifulsoup4-4.12.3-py3-none-any.whl.metadata (3.8 kB)
+Collecting lxml==5.2.1 (from -r requirements.txt (line 23))
+  Downloading lxml-5.2.1.tar.gz (3.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.7/3.7 MB 3.1 MB/s  0:00:01
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting starlette<0.39.0,>=0.37.2 (from fastapi==0.115.0->-r requirements.txt (line 1))
+  Downloading starlette-0.38.6-py3-none-any.whl.metadata (6.0 kB)
+Requirement already satisfied: pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4 in /Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages (from fastapi==0.115.0->-r requirements.txt (line 1)) (2.12.5)
+Requirement already satisfied: typing-extensions>=4.8.0 in /Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages (from fastapi==0.115.0->-r requirements.txt (line 1)) (4.15.0)
+Requirement already satisfied: click>=7.0 in /Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages (from uvicorn==0.30.0->uvicorn[standard]==0.30.0->-r requirements.txt (line 2)) (8.3.1)
+Requirement already satisfied: h11>=0.8 in /Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages (from uvicorn==0.30.0->uvicorn[standard]==0.30.0->-r requirements.txt (line 2)) (0.16.0)
+Collecting SQLAlchemy<2.1.0,>=2.0.14 (from sqlmodel==0.0.21->-r requirements.txt (line 3))
+  Downloading sqlalchemy-2.0.48-cp314-cp314-macosx_11_0_arm64.whl.metadata (9.5 kB)
+Collecting Mako (from alembic==1.13.1->-r requirements.txt (line 5))
+  Downloading mako-1.3.10-py3-none-any.whl.metadata (2.9 kB)
+Requirement already satisfied: anyio in /Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages (from httpx==0.27.0->-r requirements.txt (line 7)) (4.12.1)
+Requirement already satisfied: certifi in /Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages (from httpx==0.27.0->-r requirements.txt (line 7)) (2026.1.4)
+Collecting httpcore==1.* (from httpx==0.27.0->-r requirements.txt (line 7))
+  Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+Requirement already satisfied: idna in /Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages (from httpx==0.27.0->-r requirements.txt (line 7)) (3.11)
+Collecting sniffio (from httpx==0.27.0->-r requirements.txt (line 7))
+  Downloading sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting jplephem>=2.13 (from skyfield==1.49->-r requirements.txt (line 12))
+  Downloading jplephem-2.24-py3-none-any.whl.metadata (24 kB)
+Requirement already satisfied: sgp4>=2.2 in /Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages (from skyfield==1.49->-r requirements.txt (line 12)) (2.25)
+Requirement already satisfied: charset-normalizer<4,>=2 in /Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages (from requests==2.32.3->-r requirements.txt (line 16)) (3.4.4)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages (from requests==2.32.3->-r requirements.txt (line 16)) (2.6.3)
+Collecting billiard<5.0,>=4.2.0 (from celery==5.4.0->-r requirements.txt (line 18))
+  Downloading billiard-4.2.4-py3-none-any.whl.metadata (4.8 kB)
+Collecting kombu<6.0,>=5.3.4 (from celery==5.4.0->-r requirements.txt (line 18))
+  Downloading kombu-5.6.2-py3-none-any.whl.metadata (3.5 kB)
+Collecting vine<6.0,>=5.1.0 (from celery==5.4.0->-r requirements.txt (line 18))
+  Downloading vine-5.1.0-py3-none-any.whl.metadata (2.7 kB)
+Collecting click-didyoumean>=0.3.0 (from celery==5.4.0->-r requirements.txt (line 18))
+  Downloading click_didyoumean-0.3.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting click-repl>=0.2.0 (from celery==5.4.0->-r requirements.txt (line 18))
+  Downloading click_repl-0.3.0-py3-none-any.whl.metadata (3.6 kB)
+Collecting click-plugins>=1.1.1 (from celery==5.4.0->-r requirements.txt (line 18))
+  Downloading click_plugins-1.1.1.2-py2.py3-none-any.whl.metadata (6.5 kB)
+Collecting tzdata>=2022.7 (from celery==5.4.0->-r requirements.txt (line 18))
+  Downloading tzdata-2025.3-py2.py3-none-any.whl.metadata (1.4 kB)
+Requirement already satisfied: python-dateutil>=2.8.2 in /Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages (from celery==5.4.0->-r requirements.txt (line 18)) (2.9.0.post0)
+Collecting tornado<7.0.0,>=5.0.0 (from flower==2.0.1->-r requirements.txt (line 20))
+  Downloading tornado-6.5.5-cp39-abi3-macosx_10_9_universal2.whl.metadata (2.8 kB)
+Collecting prometheus-client>=0.8.0 (from flower==2.0.1->-r requirements.txt (line 20))
+  Downloading prometheus_client-0.24.1-py3-none-any.whl.metadata (2.1 kB)
+Collecting humanize (from flower==2.0.1->-r requirements.txt (line 20))
+  Downloading humanize-4.15.0-py3-none-any.whl.metadata (7.8 kB)
+Collecting pytz (from flower==2.0.1->-r requirements.txt (line 20))
+  Downloading pytz-2026.1.post1-py2.py3-none-any.whl.metadata (22 kB)
+Requirement already satisfied: six>=1.4.0 in /Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages (from apscheduler==3.10.4->-r requirements.txt (line 21)) (1.17.0)
+Collecting tzlocal!=3.*,>=2.0 (from apscheduler==3.10.4->-r requirements.txt (line 21))
+  Downloading tzlocal-5.3.1-py3-none-any.whl.metadata (7.6 kB)
+Collecting soupsieve>1.2 (from beautifulsoup4==4.12.3->-r requirements.txt (line 22))
+  Downloading soupsieve-2.8.3-py3-none-any.whl.metadata (4.6 kB)
+Collecting httptools>=0.5.0 (from uvicorn[standard]==0.30.0->-r requirements.txt (line 2))
+  Downloading httptools-0.7.1-cp314-cp314-macosx_11_0_arm64.whl.metadata (3.5 kB)
+Collecting pyyaml>=5.1 (from uvicorn[standard]==0.30.0->-r requirements.txt (line 2))
+  Downloading pyyaml-6.0.3-cp314-cp314-macosx_11_0_arm64.whl.metadata (2.4 kB)
+Collecting uvloop!=0.15.0,!=0.15.1,>=0.14.0 (from uvicorn[standard]==0.30.0->-r requirements.txt (line 2))
+  Downloading uvloop-0.22.1-cp314-cp314-macosx_10_13_universal2.whl.metadata (4.9 kB)
+Collecting watchfiles>=0.13 (from uvicorn[standard]==0.30.0->-r requirements.txt (line 2))
+  Downloading watchfiles-1.1.1-cp314-cp314-macosx_11_0_arm64.whl.metadata (4.9 kB)
+Requirement already satisfied: websockets>=10.4 in /Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages (from uvicorn[standard]==0.30.0->-r requirements.txt (line 2)) (16.0)
+Collecting amqp<6.0.0,>=5.1.1 (from kombu<6.0,>=5.3.4->celery==5.4.0->-r requirements.txt (line 18))
+  Downloading amqp-5.3.1-py3-none-any.whl.metadata (8.9 kB)
+Requirement already satisfied: packaging in /Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages (from kombu<6.0,>=5.3.4->celery==5.4.0->-r requirements.txt (line 18)) (26.0)
+Requirement already satisfied: annotated-types>=0.6.0 in /Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages (from pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4->fastapi==0.115.0->-r requirements.txt (line 1)) (0.7.0)
+Requirement already satisfied: pydantic-core==2.41.5 in /Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages (from pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4->fastapi==0.115.0->-r requirements.txt (line 1)) (2.41.5)
+Requirement already satisfied: typing-inspection>=0.4.2 in /Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages (from pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4->fastapi==0.115.0->-r requirements.txt (line 1)) (0.4.2)
+Collecting pyerfa>=2.0.1.1 (from astropy>=6.1.0->-r requirements.txt (line 13))
+  Downloading pyerfa-2.0.1.5-cp39-abi3-macosx_11_0_arm64.whl.metadata (5.7 kB)
+Collecting astropy-iers-data>=0.2025.10.27.0.39.10 (from astropy>=6.1.0->-r requirements.txt (line 13))
+  Downloading astropy_iers_data-0.2026.3.16.0.53.33-py3-none-any.whl.metadata (3.4 kB)
+Collecting prompt-toolkit>=3.0.36 (from click-repl>=0.2.0->celery==5.4.0->-r requirements.txt (line 18))
+  Downloading prompt_toolkit-3.0.52-py3-none-any.whl.metadata (6.4 kB)
+Collecting wcwidth (from prompt-toolkit>=3.0.36->click-repl>=0.2.0->celery==5.4.0->-r requirements.txt (line 18))
+  Downloading wcwidth-0.6.0-py3-none-any.whl.metadata (30 kB)
+Requirement already satisfied: MarkupSafe>=0.9.2 in /Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages (from Mako->alembic==1.13.1->-r requirements.txt (line 5)) (3.0.3)
+Downloading fastapi-0.115.0-py3-none-any.whl (94 kB)
+Downloading uvicorn-0.30.0-py3-none-any.whl (62 kB)
+Downloading sqlmodel-0.0.21-py3-none-any.whl (28 kB)
+Downloading alembic-1.13.1-py3-none-any.whl (233 kB)
+Downloading pydantic_settings-2.3.4-py3-none-any.whl (22 kB)
+Downloading httpx-0.27.0-py3-none-any.whl (75 kB)
+Downloading loguru-0.7.2-py3-none-any.whl (62 kB)
+Downloading python_dotenv-1.0.1-py3-none-any.whl (19 kB)
+Downloading skyfield-1.49-py3-none-any.whl (336 kB)
+Downloading requests-2.32.3-py3-none-any.whl (64 kB)
+Downloading celery-5.4.0-py3-none-any.whl (425 kB)
+Downloading redis-5.0.6-py3-none-any.whl (252 kB)
+Downloading flower-2.0.1-py2.py3-none-any.whl (383 kB)
+Downloading APScheduler-3.10.4-py3-none-any.whl (59 kB)
+Downloading beautifulsoup4-4.12.3-py3-none-any.whl (147 kB)
+Downloading billiard-4.2.4-py3-none-any.whl (87 kB)
+Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+Downloading kombu-5.6.2-py3-none-any.whl (214 kB)
+Downloading vine-5.1.0-py3-none-any.whl (9.6 kB)
+Downloading amqp-5.3.1-py3-none-any.whl (50 kB)
+Downloading sqlalchemy-2.0.48-cp314-cp314-macosx_11_0_arm64.whl (2.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.2/2.2 MB 5.9 MB/s  0:00:00
+Downloading starlette-0.38.6-py3-none-any.whl (71 kB)
+Downloading tornado-6.5.5-cp39-abi3-macosx_10_9_universal2.whl (445 kB)
+Downloading psycopg2_binary-2.9.11-cp314-cp314-macosx_11_0_arm64.whl (3.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.9/3.9 MB 8.2 MB/s  0:00:00
+Downloading astropy-7.2.0-cp311-abi3-macosx_11_0_arm64.whl (6.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.4/6.4 MB 7.0 MB/s  0:00:00
+Downloading pandas-3.0.1-cp314-cp314-macosx_11_0_arm64.whl (9.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.9/9.9 MB 8.9 MB/s  0:00:01
+Downloading astropy_iers_data-0.2026.3.16.0.53.33-py3-none-any.whl (2.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 10.7 MB/s  0:00:00
+Downloading click_didyoumean-0.3.1-py3-none-any.whl (3.6 kB)
+Downloading click_plugins-1.1.1.2-py2.py3-none-any.whl (11 kB)
+Downloading click_repl-0.3.0-py3-none-any.whl (10 kB)
+Downloading httptools-0.7.1-cp314-cp314-macosx_11_0_arm64.whl (108 kB)
+Downloading jplephem-2.24-py3-none-any.whl (49 kB)
+Downloading prometheus_client-0.24.1-py3-none-any.whl (64 kB)
+Downloading prompt_toolkit-3.0.52-py3-none-any.whl (391 kB)
+Downloading pyerfa-2.0.1.5-cp39-abi3-macosx_11_0_arm64.whl (329 kB)
+Downloading pyyaml-6.0.3-cp314-cp314-macosx_11_0_arm64.whl (173 kB)
+Downloading soupsieve-2.8.3-py3-none-any.whl (37 kB)
+Downloading tzdata-2025.3-py2.py3-none-any.whl (348 kB)
+Downloading tzlocal-5.3.1-py3-none-any.whl (18 kB)
+Downloading uvloop-0.22.1-cp314-cp314-macosx_10_13_universal2.whl (1.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 11.8 MB/s  0:00:00
+Downloading watchfiles-1.1.1-cp314-cp314-macosx_11_0_arm64.whl (390 kB)
+Downloading humanize-4.15.0-py3-none-any.whl (132 kB)
+Downloading mako-1.3.10-py3-none-any.whl (78 kB)
+Downloading pytz-2026.1.post1-py2.py3-none-any.whl (510 kB)
+Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+Downloading wcwidth-0.6.0-py3-none-any.whl (94 kB)
+Building wheels for collected packages: nrlmsise00, lxml
+  Building wheel for nrlmsise00 (pyproject.toml): started
+  Building wheel for nrlmsise00 (pyproject.toml): finished with status 'error'
+  error: subprocess-exited-with-error
+  
+  × Building wheel for nrlmsise00 (pyproject.toml) did not run successfully.
+  │ exit code: 1
+  ╰─> [32 lines of output]
+      <string>:40: DeprecationWarning: codecs.open() is deprecated. Use open() instead.
+      /private/tmp/pip-build-env-h1vq_4ze/overlay/lib/python3.14/site-packages/setuptools/dist.py:765: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+      !!
+      
+              ********************************************************************************
+              Please consider removing the following classifiers in favor of a SPDX license expression:
+      
+              License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+      
+              See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+              ********************************************************************************
+      
+      !!
+        self._finalize_license_expression()
+      running bdist_wheel
+      running build
+      running build_py
+      creating build/lib.macosx-10.15-universal2-cpython-314/nrlmsise00
+      copying src/nrlmsise00/__init__.py -> build/lib.macosx-10.15-universal2-cpython-314/nrlmsise00
+      copying src/nrlmsise00/core.py -> build/lib.macosx-10.15-universal2-cpython-314/nrlmsise00
+      creating build/lib.macosx-10.15-universal2-cpython-314/nrlmsise00/dataset
+      copying src/nrlmsise00/dataset/__init__.py -> build/lib.macosx-10.15-universal2-cpython-314/nrlmsise00/dataset
+      copying src/nrlmsise00/dataset/core.py -> build/lib.macosx-10.15-universal2-cpython-314/nrlmsise00/dataset
+      running build_ext
+      building 'nrlmsise00._nrlmsise00' extension
+      creating build/temp.macosx-10.15-universal2-cpython-314/src/c_nrlmsise-00
+      creating build/temp.macosx-10.15-universal2-cpython-314/src/nrlmsise00
+      clang -fno-strict-overflow -Wsign-compare -Wunreachable-code -fno-common -dynamic -DNDEBUG -g -O3 -Wall -arch arm64 -arch x86_64 -Isrc/c_nrlmsise-00 -I/Library/Frameworks/Python.framework/Versions/3.14/include/python3.14 -c src/c_nrlmsise-00/nrlmsise-00.c -o build/temp.macosx-10.15-universal2-cpython-314/src/c_nrlmsise-00/nrlmsise-00.o
+      clang: error: couldn't create cache file '/var/folders/92/rkgd26793zx_gjhdzxhfv0j40000gn/T/xcrun_db-pbauvulm' (errno=Operation not permitted)
+      clang: error: unable to make temporary file: Operation not permitted
+      clang: error: unable to make temporary file: Operation not permitted
+      error: command '/usr/bin/clang' failed with exit code 1
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+  ERROR: Failed building wheel for nrlmsise00
+  Building wheel for lxml (pyproject.toml): started
+  Building wheel for lxml (pyproject.toml): finished with status 'error'
+  error: subprocess-exited-with-error
+  
+  × Building wheel for lxml (pyproject.toml) did not run successfully.
+  │ exit code: 1
+  ╰─> [123 lines of output]
+      /private/tmp/pip-build-env-xrvm5t9b/overlay/lib/python3.14/site-packages/setuptools/dist.py:765: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+      !!
+      
+              ********************************************************************************
+              Please consider removing the following classifiers in favor of a SPDX license expression:
+      
+              License :: OSI Approved :: BSD License
+      
+              See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+              ********************************************************************************
+      
+      !!
+        self._finalize_license_expression()
+      Building lxml version 5.2.1.
+      Building without Cython.
+      Building against libxml2 2.9.13 and libxslt 1.1.35
+      running bdist_wheel
+      running build
+      running build_py
+      creating build/lib.macosx-10.15-universal2-cpython-314/lxml
+      copying src/lxml/_elementpath.py -> build/lib.macosx-10.15-universal2-cpython-314/lxml
+      copying src/lxml/sax.py -> build/lib.macosx-10.15-universal2-cpython-314/lxml
+      copying src/lxml/pyclasslookup.py -> build/lib.macosx-10.15-universal2-cpython-314/lxml
+      copying src/lxml/__init__.py -> build/lib.macosx-10.15-universal2-cpython-314/lxml
+      copying src/lxml/builder.py -> build/lib.macosx-10.15-universal2-cpython-314/lxml
+      copying src/lxml/doctestcompare.py -> build/lib.macosx-10.15-universal2-cpython-314/lxml
+      copying src/lxml/usedoctest.py -> build/lib.macosx-10.15-universal2-cpython-314/lxml
+      copying src/lxml/cssselect.py -> build/lib.macosx-10.15-universal2-cpython-314/lxml
+      copying src/lxml/ElementInclude.py -> build/lib.macosx-10.15-universal2-cpython-314/lxml
+      creating build/lib.macosx-10.15-universal2-cpython-314/lxml/includes
+      copying src/lxml/includes/__init__.py -> build/lib.macosx-10.15-universal2-cpython-314/lxml/includes
+      creating build/lib.macosx-10.15-universal2-cpython-314/lxml/html
+      copying src/lxml/html/soupparser.py -> build/lib.macosx-10.15-universal2-cpython-314/lxml/html
+      copying src/lxml/html/defs.py -> build/lib.macosx-10.15-universal2-cpython-314/lxml/html
+      copying src/lxml/html/_setmixin.py -> build/lib.macosx-10.15-universal2-cpython-314/lxml/html
+      copying src/lxml/html/clean.py -> build/lib.macosx-10.15-universal2-cpython-314/lxml/html
+      copying src/lxml/html/_diffcommand.py -> build/lib.macosx-10.15-universal2-cpython-314/lxml/html
+      copying src/lxml/html/html5parser.py -> build/lib.macosx-10.15-universal2-cpython-314/lxml/html
+      copying src/lxml/html/__init__.py -> build/lib.macosx-10.15-universal2-cpython-314/lxml/html
+      copying src/lxml/html/formfill.py -> build/lib.macosx-10.15-universal2-cpython-314/lxml/html
+      copying src/lxml/html/builder.py -> build/lib.macosx-10.15-universal2-cpython-314/lxml/html
+      copying src/lxml/html/ElementSoup.py -> build/lib.macosx-10.15-universal2-cpython-314/lxml/html
+      copying src/lxml/html/_html5builder.py -> build/lib.macosx-10.15-universal2-cpython-314/lxml/html
+      copying src/lxml/html/usedoctest.py -> build/lib.macosx-10.15-universal2-cpython-314/lxml/html
+      copying src/lxml/html/diff.py -> build/lib.macosx-10.15-universal2-cpython-314/lxml/html
+      creating build/lib.macosx-10.15-universal2-cpython-314/lxml/isoschematron
+      copying src/lxml/isoschematron/__init__.py -> build/lib.macosx-10.15-universal2-cpython-314/lxml/isoschematron
+      copying src/lxml/etree.h -> build/lib.macosx-10.15-universal2-cpython-314/lxml
+      copying src/lxml/etree_api.h -> build/lib.macosx-10.15-universal2-cpython-314/lxml
+      copying src/lxml/lxml.etree.h -> build/lib.macosx-10.15-universal2-cpython-314/lxml
+      copying src/lxml/lxml.etree_api.h -> build/lib.macosx-10.15-universal2-cpython-314/lxml
+      copying src/lxml/objectify.pyx -> build/lib.macosx-10.15-universal2-cpython-314/lxml
+      copying src/lxml/etree.pyx -> build/lib.macosx-10.15-universal2-cpython-314/lxml
+      copying src/lxml/public-api.pxi -> build/lib.macosx-10.15-universal2-cpython-314/lxml
+      copying src/lxml/xmlid.pxi -> build/lib.macosx-10.15-universal2-cpython-314/lxml
+      copying src/lxml/cleanup.pxi -> build/lib.macosx-10.15-universal2-cpython-314/lxml
+      copying src/lxml/xslt.pxi -> build/lib.macosx-10.15-universal2-cpython-314/lxml
+      copying src/lxml/xpath.pxi -> build/lib.macosx-10.15-universal2-cpython-314/lxml
+      copying src/lxml/debug.pxi -> build/lib.macosx-10.15-universal2-cpython-314/lxml
+      copying src/lxml/serializer.pxi -> build/lib.macosx-10.15-universal2-cpython-314/lxml
+      copying src/lxml/classlookup.pxi -> build/lib.macosx-10.15-universal2-cpython-314/lxml
+      copying src/lxml/saxparser.pxi -> build/lib.macosx-10.15-universal2-cpython-314/lxml
+      copying src/lxml/objectpath.pxi -> build/lib.macosx-10.15-universal2-cpython-314/lxml
+      copying src/lxml/relaxng.pxi -> build/lib.macosx-10.15-universal2-cpython-314/lxml
+      copying src/lxml/xinclude.pxi -> build/lib.macosx-10.15-universal2-cpython-314/lxml
+      copying src/lxml/iterparse.pxi -> build/lib.macosx-10.15-universal2-cpython-314/lxml
+      copying src/lxml/parser.pxi -> build/lib.macosx-10.15-universal2-cpython-314/lxml
+      copying src/lxml/dtd.pxi -> build/lib.macosx-10.15-universal2-cpython-314/lxml
+      copying src/lxml/apihelpers.pxi -> build/lib.macosx-10.15-universal2-cpython-314/lxml
+      copying src/lxml/xmlerror.pxi -> build/lib.macosx-10.15-universal2-cpython-314/lxml
+      copying src/lxml/readonlytree.pxi -> build/lib.macosx-10.15-universal2-cpython-314/lxml
+      copying src/lxml/extensions.pxi -> build/lib.macosx-10.15-universal2-cpython-314/lxml
+      copying src/lxml/xmlschema.pxi -> build/lib.macosx-10.15-universal2-cpython-314/lxml
+      copying src/lxml/schematron.pxi -> build/lib.macosx-10.15-universal2-cpython-314/lxml
+      copying src/lxml/docloader.pxi -> build/lib.macosx-10.15-universal2-cpython-314/lxml
+      copying src/lxml/nsclasses.pxi -> build/lib.macosx-10.15-universal2-cpython-314/lxml
+      copying src/lxml/parsertarget.pxi -> build/lib.macosx-10.15-universal2-cpython-314/lxml
+      copying src/lxml/xsltext.pxi -> build/lib.macosx-10.15-universal2-cpython-314/lxml
+      copying src/lxml/proxy.pxi -> build/lib.macosx-10.15-universal2-cpython-314/lxml
+      copying src/lxml/includes/xmlerror.pxd -> build/lib.macosx-10.15-universal2-cpython-314/lxml/includes
+      copying src/lxml/includes/c14n.pxd -> build/lib.macosx-10.15-universal2-cpython-314/lxml/includes
+      copying src/lxml/includes/xmlschema.pxd -> build/lib.macosx-10.15-universal2-cpython-314/lxml/includes
+      copying src/lxml/includes/__init__.pxd -> build/lib.macosx-10.15-universal2-cpython-314/lxml/includes
+      copying src/lxml/includes/schematron.pxd -> build/lib.macosx-10.15-universal2-cpython-314/lxml/includes
+      copying src/lxml/includes/tree.pxd -> build/lib.macosx-10.15-universal2-cpython-314/lxml/includes
+      copying src/lxml/includes/uri.pxd -> build/lib.macosx-10.15-universal2-cpython-314/lxml/includes
+      copying src/lxml/includes/etreepublic.pxd -> build/lib.macosx-10.15-universal2-cpython-314/lxml/includes
+      copying src/lxml/includes/xpath.pxd -> build/lib.macosx-10.15-universal2-cpython-314/lxml/includes
+      copying src/lxml/includes/htmlparser.pxd -> build/lib.macosx-10.15-universal2-cpython-314/lxml/includes
+      copying src/lxml/includes/xslt.pxd -> build/lib.macosx-10.15-universal2-cpython-314/lxml/includes
+      copying src/lxml/includes/config.pxd -> build/lib.macosx-10.15-universal2-cpython-314/lxml/includes
+      copying src/lxml/includes/xmlparser.pxd -> build/lib.macosx-10.15-universal2-cpython-314/lxml/includes
+      copying src/lxml/includes/xinclude.pxd -> build/lib.macosx-10.15-universal2-cpython-314/lxml/includes
+      copying src/lxml/includes/dtdvalid.pxd -> build/lib.macosx-10.15-universal2-cpython-314/lxml/includes
+      copying src/lxml/includes/relaxng.pxd -> build/lib.macosx-10.15-universal2-cpython-314/lxml/includes
+      copying src/lxml/includes/lxml-version.h -> build/lib.macosx-10.15-universal2-cpython-314/lxml/includes
+      copying src/lxml/includes/etree_defs.h -> build/lib.macosx-10.15-universal2-cpython-314/lxml/includes
+      creating build/lib.macosx-10.15-universal2-cpython-314/lxml/isoschematron/resources/rng
+      copying src/lxml/isoschematron/resources/rng/iso-schematron.rng -> build/lib.macosx-10.15-universal2-cpython-314/lxml/isoschematron/resources/rng
+      creating build/lib.macosx-10.15-universal2-cpython-314/lxml/isoschematron/resources/xsl
+      copying src/lxml/isoschematron/resources/xsl/XSD2Schtrn.xsl -> build/lib.macosx-10.15-universal2-cpython-314/lxml/isoschematron/resources/xsl
+      copying src/lxml/isoschematron/resources/xsl/RNG2Schtrn.xsl -> build/lib.macosx-10.15-universal2-cpython-314/lxml/isoschematron/resources/xsl
+      creating build/lib.macosx-10.15-universal2-cpython-314/lxml/isoschematron/resources/xsl/iso-schematron-xslt1
+      copying src/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_abstract_expand.xsl -> build/lib.macosx-10.15-universal2-cpython-314/lxml/isoschematron/resources/xsl/iso-schematron-xslt1
+      copying src/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_dsdl_include.xsl -> build/lib.macosx-10.15-universal2-cpython-314/lxml/isoschematron/resources/xsl/iso-schematron-xslt1
+      copying src/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_schematron_skeleton_for_xslt1.xsl -> build/lib.macosx-10.15-universal2-cpython-314/lxml/isoschematron/resources/xsl/iso-schematron-xslt1
+      copying src/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_svrl_for_xslt1.xsl -> build/lib.macosx-10.15-universal2-cpython-314/lxml/isoschematron/resources/xsl/iso-schematron-xslt1
+      copying src/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_schematron_message.xsl -> build/lib.macosx-10.15-universal2-cpython-314/lxml/isoschematron/resources/xsl/iso-schematron-xslt1
+      copying src/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/readme.txt -> build/lib.macosx-10.15-universal2-cpython-314/lxml/isoschematron/resources/xsl/iso-schematron-xslt1
+      running build_ext
+      building 'lxml.etree' extension
+      creating build/temp.macosx-10.15-universal2-cpython-314/src/lxml
+      clang -fno-strict-overflow -Wsign-compare -Wunreachable-code -fno-common -dynamic -DNDEBUG -g -O3 -Wall -arch arm64 -arch x86_64 -DCYTHON_CLINE_IN_TRACEBACK=0 -Isrc -Isrc/lxml/includes -I/Library/Frameworks/Python.framework/Versions/3.14/include/python3.14 -c src/lxml/etree.c -o build/temp.macosx-10.15-universal2-cpython-314/src/lxml/etree.o -w -flat_namespace
+      clang: error: couldn't create cache file '/var/folders/92/rkgd26793zx_gjhdzxhfv0j40000gn/T/xcrun_db-D11GNcl6' (errno=Operation not permitted)
+      clang: error: unable to make temporary file: Operation not permitted
+      clang: error: unable to make temporary file: Operation not permitted
+      Compile failed: command '/usr/bin/clang' failed with exit code 1
+      creating tmp
+      cc -I/usr/include/libxml2 -c /tmp/xmlXPathInit_b2iu76p.c -o tmp/xmlXPathInit_b2iu76p.o
+      cc: error: couldn't create cache file '/var/folders/92/rkgd26793zx_gjhdzxhfv0j40000gn/T/xcrun_db-0759ZWvP' (errno=Operation not permitted)
+      cc tmp/xmlXPathInit_b2iu76p.o -lxml2 -o a.out
+      cc: error: couldn't create cache file '/var/folders/92/rkgd26793zx_gjhdzxhfv0j40000gn/T/xcrun_db-pBDZfe6R' (errno=Operation not permitted)
+      error: command '/usr/bin/clang' failed with exit code 1
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+  ERROR: Failed building wheel for lxml
+Failed to build nrlmsise00 lxml
+
+[notice] A new release of pip is available: 25.3 -> 26.0.1
+[notice] To update, run: python3 -m pip install --upgrade pip
+error: failed-wheel-build-for-install
+
+× Failed to build installable wheels for some pyproject.toml based projects
+╰─> nrlmsise00, lxml

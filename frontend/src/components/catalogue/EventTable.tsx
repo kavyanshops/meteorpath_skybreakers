@@ -3,6 +3,7 @@ import { Network } from 'lucide-react';
 import { EventSummary } from '../../types';
 import { Badge } from '../ui/Badge';
 import { useNavigate } from 'react-router-dom';
+import { useCompareStore } from '../../store/compareStore';
 
 interface EventTableProps {
     events: EventSummary[];
@@ -10,6 +11,7 @@ interface EventTableProps {
 
 export function EventTable({ events }: EventTableProps) {
     const navigate = useNavigate();
+    const { selectedEventIds, toggleEvent } = useCompareStore();
 
     const getVelocityColorClass = (v: number | null) => {
         if (!v) return 'text-secondary';
@@ -24,6 +26,7 @@ export function EventTable({ events }: EventTableProps) {
             <table className="w-full text-left whitespace-nowrap border-collapse">
                 <thead className="sticky top-0 z-10 bg-deep border-b border-subtle">
                     <tr>
+                        <th className="px-4 py-3 w-8"></th>
                         <th className="px-4 py-3 text-[11px] font-mono uppercase tracking-widest text-muted">Time (UTC)</th>
                         <th className="px-4 py-3 text-[11px] font-mono uppercase tracking-widest text-muted">Network</th>
                         <th className="px-4 py-3 text-[11px] font-mono uppercase tracking-widest text-muted">Region</th>
@@ -35,12 +38,24 @@ export function EventTable({ events }: EventTableProps) {
                     </tr>
                 </thead>
                 <tbody>
-                    {events.map((event) => (
+                    {events.map((event) => {
+                        const isSelected = selectedEventIds.includes(event.id);
+                        return (
                         <tr
                             key={event.id}
                             onClick={() => navigate(`/events/${event.id}`)}
-                            className="h-14 border-b border-subtle bg-transparent hover:bg-elevated cursor-pointer transition-colors"
+                            className={`h-14 border-b border-subtle bg-transparent hover:bg-elevated cursor-pointer transition-colors ${isSelected ? 'bg-accent-primary/5' : ''}`}
                         >
+                            <td className="px-4 w-8" onClick={(e) => e.stopPropagation()}>
+                                <input 
+                                    type="checkbox" 
+                                    checked={isSelected}
+                                    disabled={!isSelected && selectedEventIds.length >= 5}
+                                    onChange={() => toggleEvent(event.id)}
+                                    title={!isSelected && selectedEventIds.length >= 5 ? "Max 5 events selected" : "Select for comparison"}
+                                    className="w-4 h-4 rounded border-slate-700 bg-slate-800 text-accent-primary focus:ring-accent-primary cursor-pointer disabled:opacity-30 disabled:cursor-not-allowed"
+                                />
+                            </td>
                             {/* Time */}
                             <td className="px-4 font-mono text-[13px] text-secondary">
                                 {format(new Date(event.begin_utc), 'yyyy-MM-dd HH:mm:ss')}
@@ -103,7 +118,7 @@ export function EventTable({ events }: EventTableProps) {
                                 </div>
                             </td>
                         </tr>
-                    ))}
+                    )})}
                     {events.length === 0 && (
                         <tr>
                             <td colSpan={8} className="px-4 py-8 text-center text-muted text-sm">

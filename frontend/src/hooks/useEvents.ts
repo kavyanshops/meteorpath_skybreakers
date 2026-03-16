@@ -13,6 +13,7 @@ export interface UseEventsParams {
     maxVelocity?: number | null;
     showerCode?: string | null;
     search?: string | null;
+    reconstructedOnly?: boolean;
 }
 
 export const useEvents = (params: UseEventsParams) => {
@@ -32,6 +33,7 @@ export const useEvents = (params: UseEventsParams) => {
                     max_velocity: params.maxVelocity,
                     shower_code: params.showerCode,
                     search: params.search,
+                    reconstructed_only: params.reconstructedOnly,
                 }).filter(([_, v]) => v != null && v !== '')
             );
 

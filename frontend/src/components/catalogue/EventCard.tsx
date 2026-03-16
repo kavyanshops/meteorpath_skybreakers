@@ -5,6 +5,7 @@ import { EventSummary } from '../../types';
 import { Badge, cn } from '../ui/Badge';
 import { Card } from '../ui/Card';
 import { StatChip } from '../ui/StatChip';
+import { useCompareStore } from '../../store/compareStore';
 
 interface EventCardProps {
     event: EventSummary;
@@ -20,14 +21,31 @@ export function EventCard({ event }: EventCardProps) {
     };
 
     const velocityGradient = getVelocityTextGradient(event.entry_velocity_km_s);
+    const { selectedEventIds, toggleEvent } = useCompareStore();
+    const isSelected = selectedEventIds.includes(event.id);
 
     return (
-        <Link to={`/events/${event.id}`} className="block h-full cursor-pointer">
+        <Link to={`/events/${event.id}`} className={cn("block h-full cursor-pointer transition-transform", isSelected ? "ring-2 ring-accent-primary ring-offset-2 ring-offset-void rounded-xl" : "")}>
             <Card hoverEffect className="h-full flex flex-col relative group">
 
                 {/* Top Row: Network + Time */}
                 <div className="flex justify-between items-start mb-4">
-                    <Badge variant={event.network.toLowerCase() as any}>{event.network}</Badge>
+                    <div className="flex items-center gap-3">
+                        <input 
+                            type="checkbox" 
+                            checked={isSelected}
+                            disabled={!isSelected && selectedEventIds.length >= 5}
+                            onChange={(e) => {
+                               e.stopPropagation();
+                               e.preventDefault();
+                               toggleEvent(event.id);
+                            }}
+                            onClick={(e) => e.stopPropagation()}
+                            className="w-4 h-4 rounded border-slate-700 bg-slate-800 text-accent-primary focus:ring-accent-primary focus:ring-offset-void cursor-pointer z-10 relative disabled:opacity-30 disabled:cursor-not-allowed"
+                            title={!isSelected && selectedEventIds.length >= 5 ? "Max 5 events selected" : "Select for comparison"}
+                        />
+                        <Badge variant={event.network.toLowerCase() as any}>{event.network}</Badge>
+                    </div>
                     <span className="font-mono text-xs text-muted">
                         {format(new Date(event.begin_utc), 'yyyy-MM-dd HH:mm:ss')}
                     </span>

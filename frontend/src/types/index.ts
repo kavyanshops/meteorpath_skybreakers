@@ -23,7 +23,34 @@ export interface ReconstructionDetail {
     orbit_omega_deg: number | null;
     orbit_Omega_deg: number | null;
     orbit_q_au: number | null;
+    celery_task_id: string | null;
+    low_quality_flag: boolean;
+    quality_warning: string | null;
+    station_offsets_estimated: boolean;
+    mass_estimation_available: boolean;
+    estimated_mass_kg: number | null;
+    estimated_mass_lower_kg: number | null;
+    estimated_mass_upper_kg: number | null;
+    luminous_efficiency_tau: number | null;
+    is_reference_solution: boolean;
     completed_at: string | null;
+}
+
+export interface VisualsPayload {
+  trajectory: {lat: number; lon: number; height: number}[];
+  stations: {id: string|number; name: string; lat: number; lon: number; height: number}[];
+  los_lines: {fromLat: number; fromLon: number; fromH: number; toLat: number; toLon: number; toH: number}[];
+  velocity_profile: {time_sec: number; velocity_km_s: number}[];
+  residuals: {index: number; station_code: string; residual_arcsec: number}[];
+}
+
+export interface DarkFlightPayload {
+  survived: boolean;
+  impact_lat: number | null;
+  impact_lon: number | null;
+  impact_mass_kg?: number | null;
+  path_coordinates: [number, number, number][];
+  strewn_field_ellipse?: { center: [number, number]; semi_major_m: number; semi_minor_m: number; angle_deg: number; };
 }
 
 export interface EventSummary {

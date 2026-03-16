@@ -16,7 +16,6 @@ class Settings(BaseSettings):
             "https://*.vercel.app",
         ]
         combined = list(set(origins + defaults))
-        combined.append("*")
         return combined
 
     class Config:
